@@ -98,12 +98,13 @@ public class ColumnChecker {
     blackList.add(byIndexMeth);
     Method byNameMeth = byNameGetter.method();
     blackList.add(byNameMeth);
+    String nameIndex = name + "/" + index;
     expects.add(row -> {
       Object actual = byIndexGetter.apply(row, index);
       try {
         check.accept((R) actual);
       } catch (AssertionError cause) {
-        AssertionFailedError failure = new AssertionFailedError("Expected that " + byIndexMeth + " would not fail: " + cause.getMessage());
+        AssertionFailedError failure = new AssertionFailedError("Expected that " + byIndexMeth + " would not fail for " + nameIndex + ": " + cause.getMessage());
         failure.setStackTrace(failure.getStackTrace());
         throw failure;
       }
@@ -111,7 +112,7 @@ public class ColumnChecker {
       try {
         check.accept((R) actual);
       } catch (AssertionError cause) {
-        AssertionFailedError failure = new AssertionFailedError("Expected that " + byNameMeth + " would not fail: " + cause.getMessage());
+        AssertionFailedError failure = new AssertionFailedError("Expected that " + byNameMeth + " would not fail for " + nameIndex + ": " + cause.getMessage());
         failure.setStackTrace(failure.getStackTrace());
         throw failure;
       }

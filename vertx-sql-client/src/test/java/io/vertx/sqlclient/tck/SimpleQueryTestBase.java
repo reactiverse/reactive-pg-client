@@ -72,7 +72,7 @@ public abstract class SimpleQueryTestBase {
   public void testQuery(TestContext ctx) {
     connect(ctx.asyncAssertSuccess(conn -> {
       conn
-        .query("SELECT id, message from immutable")
+        .query("SELECT id, message FROM immutable ORDER BY id")
         .execute(ctx.asyncAssertSuccess(result -> {
         //TODO we need to figure how to handle PgResult#rowCount() method in common API,
         // MySQL returns affected rows as 0 for SELECT query but Postgres returns queried amount

@@ -1,0 +1,45 @@
+# Packet 4
+peer0_0: !!binary |
+  ABhDbGlja0hvdXNlIGp5dGhvbi1kcml2ZXIUCqmpAwdkZWZhdWx0B2RlZmF1bHQHZGVmYXVsdA==
+# Packet 6
+peer1_0: !!binary |
+  AApDbGlja0hvdXNlFQKvqQMNRXVyb3BlL01vc2NvdwZiaG9yc2UF
+# Packet 8
+peer0_1: !!binary |
+  AQABAAAJMC4wLjAuMDowAQh2bGFkaW1pcgZiaG9yc2UYQ2xpY2tIb3VzZSBqeXRob24tZHJpdmVy
+  FAqpqQMAAg5tYXhfYmxvY2tfc2l6ZQECNTAAAAIBZHNlbGVjdCBuYW1lLCB2YWx1ZSBmcm9tIChT
+  RUxFQ1QgbmFtZSwgdmFsdWUgZnJvbSB2ZXJ0eF9jbF90ZXN0X3RhYmxlIGxpbWl0IDU1KSB0MSBv
+  cmRlciBieSBuYW1lIGRlc2MCAKeDrGzVXHp8taxGvduG4hSCFAAAAAoAAACgAQAC/////wAAAA==
+# Packet 10
+peer1_1: !!binary |
+  AQBicwHkjGdcDo5MWkTMRbtOgi4AAAAjAAAA8BQBAAL/////AAIABG5hbWUGU3RyaW5nBXZhbHVl
+  BlVJbnQzMg==
+# Packet 12
+peer1_2: !!binary |
+  AQCx4PZsr1XBX5U/lPIe9471grQBAACoAQAA8P+aAQAC/////wACMgRuYW1lBlN0cmluZwJ7aQR7
+  RnVLBXl7SUA1AXkFeHV5bGgEeEAmbwJzKwJweQFrAmdjA2ZmLAVmI3BiSgFlAWIEYSdQYAJgYgVd
+  YCtycwVdOjpgLwNaIWkBWgVYRDBaegNXQ0gCVEoCVDICT2sBTwVLY0ZzJAFGBEVVSVoBRQRDckp3
+  BUB2cGFTBT5JQkhFAT4BPQQ8aTw/BTtZI1ZZAzlZVgU5N2hxYQE5ATcDM21uBDNORG4DMER2Ay0y
+  dgEpAidHBCE7aFEAAAV2YWx1ZQZVSW50MzIZau9oH+r3XisCpaD436HtlAmcwpeNsTJr6e1xMFSZ
+  7F9egG+ffWSQxNMEOu+NXx47vlJ1AILiTQuVGhuBd0PHYDAjkUxsHDg8IrICpyFLWQ7DTwMYcYFn
+  1KFkIHb0q7TIqEEIu1lq/reMAjPrm0d4sigZonzGGasj4Xf8KhgYv/t3resP2ROWE+GUFdtdWUt9
+  5pK8C4fy31H1nvq8YLa8ajedGLw8hP6Nti/Xct1fsJLUdWBG92LSJwsjYHY71dVqQkJqmXsI4w==
+# Packet 14
+peer1_3: !!binary |
+  AQAJ2NHGgowQkuLjsPN8N5logkcAAAA8AAAA8AgBAAL/////AAIFBG5hbWUGU3RyaW5nAAEA8BIF
+  dmFsdWUGVUludDMybZltXecjidDGXat5idKGXty+Sl8=
+# Packet 16
+peer1_4: !!binary |
+  BjcCgKIBAWQB
+# Packet 18
+peer1_5: !!binary |
+  A8gBrRgAAAA=
+# Packet 20
+peer1_6: !!binary |
+  AQCng6xs1Vx6fLWsRr3bhuIUghQAAAAKAAAAoAEAAv////8AAAA=
+# Packet 22
+peer1_7: !!binary |
+  AwAAAAAA
+# Packet 24
+peer1_8: !!binary |
+  BQ==

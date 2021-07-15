@@ -117,6 +117,7 @@
         <module>vertx-mysql-client</module>
         <module>vertx-mssql-client</module>
         <module>vertx-db2-client</module>
+        <module>vertx-clickhouse-binary-client</module>
         <module>vertx-sql-client-templates</module>
       </modules>
     </profile>

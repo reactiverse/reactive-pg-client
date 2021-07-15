@@ -180,8 +180,8 @@ public abstract class BinaryDataTypeDecodeTestBase extends DataTypeTestBase {
             ctx.assertEquals(LocalTime.parse("18:45:02"), row.getValue("test_time"));
             conn.close();
           }));
-        }));
-    }
+      }));
+  }
 
   @Test
   public void testToJsonObject(TestContext ctx) {

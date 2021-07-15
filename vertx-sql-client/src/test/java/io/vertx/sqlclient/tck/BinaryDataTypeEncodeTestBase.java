@@ -131,6 +131,13 @@ public abstract class BinaryDataTypeEncodeTestBase extends DataTypeTestBase {
         }));
   }
 
+  protected void maybeSleep() {
+  }
+
+  protected String encodeGenericUpdateStatement(String columnName, int id) {
+    return statement("UPDATE basicdatatype SET " + columnName + " = ", " WHERE id = " + id);
+  }
+
   protected <T> void testEncodeGeneric(TestContext ctx,
                                        String columnName,
                                        Class<? extends T> clazz,
@@ -138,8 +145,9 @@ public abstract class BinaryDataTypeEncodeTestBase extends DataTypeTestBase {
                                        T expected) {
     connector.connect(ctx.asyncAssertSuccess(conn -> {
       conn
-        .preparedQuery(statement("UPDATE basicdatatype SET " + columnName + " = ", " WHERE id = 2"))
+        .preparedQuery(encodeGenericUpdateStatement(columnName, 2))
         .execute(Tuple.tuple().addValue(expected), ctx.asyncAssertSuccess(updateResult -> {
+         maybeSleep();
         conn
           .preparedQuery("SELECT " + columnName + " FROM basicdatatype WHERE id = 2")
           .execute(ctx.asyncAssertSuccess(result -> {

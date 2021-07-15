@@ -52,6 +52,13 @@ public abstract class PreparedBatchTestBase {
     vertx.close(ctx.asyncAssertSuccess());
   }
 
+  protected void maybeSleep() {
+  }
+
+  protected int expectedInsertBatchSize(List<Tuple> batch) {
+    return 1;
+  }
+
   @Test
   public void testInsert(TestContext ctx) {
     connector.connect(ctx.asyncAssertSuccess(conn -> {
@@ -62,7 +69,8 @@ public abstract class PreparedBatchTestBase {
       batch.add(Tuple.wrap(Arrays.asList(79994, "batch four")));
 
       conn.preparedQuery(statement("INSERT INTO mutable (id, val) VALUES (", ", ", ")")).executeBatch(batch, ctx.asyncAssertSuccess(result -> {
-        ctx.assertEquals(1, result.rowCount());
+        maybeSleep();
+        ctx.assertEquals(expectedInsertBatchSize(batch), result.rowCount());
         conn.preparedQuery(statement("SELECT * FROM mutable WHERE id=", "")).executeBatch(Collections.singletonList(Tuple.of(79991)), ctx.asyncAssertSuccess(ar1 -> {
           ctx.assertEquals(1, ar1.size());
           Row one = ar1.iterator().next();
